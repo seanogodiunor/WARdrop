@@ -163,3 +163,22 @@ toggle.addEventListener("change", () => {
   // Initial position
   updateCarousel();
 });
+
+
+// Alert for download buttons
+document.addEventListener("DOMContentLoaded", () => {
+  const downloadButtons = [
+    document.getElementById("download-btn"),
+    document.getElementById("cta-download-btn"),
+    document.getElementById("mobile-download-btn")
+  ];
+
+  downloadButtons.forEach(button => {
+    if (button) {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("The app is currently not available. It is expected to be launched in the next couple of months.");
+      });
+    }
+  });
+});
