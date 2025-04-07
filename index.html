@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WARdrobe - Digital Wardrobe App</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="container">
+        <!-- Logo Section -->
+        <div class="logo">
+          <img src="./CropedLogo.png" alt="WARdrobe Logo" class="logo-image" />
+        </div>
+
+        <div class="dark-mode-toggle">
+          <input type="checkbox" id="dark-mode-toggle" />
+          <label for="dark-mode-toggle"><i class="fas fa-moon"></i></label>
+        </div>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#privacy">Privacy</a>
+          <button class="cta-button">Download Now</button>
+        </div>
+
+        <script src="script.js" defer></script>
+
+        <div class="hamburger" id="hamburger-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="mobile-nav" id="mobile-nav">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#privacy">Privacy</a>
+          <button class="cta-button">Download Now</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Digital Assistant Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Your Digital WARdrobe Assistant</h1>
+
+        <!-- Modern Mobile Screenshot Carousel -->
+        <div class="carousel-container">
+          <button class="carousel-button prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-button next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="carousel">
+            <!-- Device 1 -->
+            <div class="device-wrapper">
+              <div class="device-notch"></div>
+              <div class="device-button power"></div>
+              <div class="device-button volume-up"></div>
+              <div class="device-button volume-down"></div>
+              <div class="device-screen">
+                <img 
+                  src="./home.jpg" 
+                  alt="Home Screen" 
+                  class="screenshot light-mode-img"
+                  data-dark-src="./profile.jpg"
+                />
+                <div class="description">
+                  <h3>Home Dashboard</h3>
+                  <p>Here we display all the important information at a glance</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Device 2 -->
+            <div class="device-wrapper">
+              <div class="device-notch"></div>
+              <div class="device-button power"></div>
+              <div class="device-button volume-up"></div>
+              <div class="device-button volume-down"></div>
+              <div class="device-screen">
+                <img
+                  src="./weather.jpg" 
+                  alt="Home Screen" 
+                  class="screenshot light-mode-img"
+                  data-dark-src="./profile.jpg"
+                />
+                <div class="description">
+                  <h3>Weather Updates</h3>
+                  <p>Real-time weather information at your fingertips</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Device 3 -->
+            <div class="device-wrapper">
+              <div class="device-notch"></div>
+              <div class="device-button power"></div>
+              <div class="device-button volume-up"></div>
+              <div class="device-button volume-down"></div>
+              <div class="device-screen">
+                <img
+                  src="./home.jpg" 
+                  alt="Home Screen" 
+                  class="screenshot light-mode-img"
+                  data-dark-src="./profile.jpg"
+                />
+                <div class="description">
+                  <h3>Favorite Display</h3>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Device 4 -->
+            <div class="device-wrapper">
+              <div class="device-notch"></div>
+              <div class="device-button power"></div>
+              <div class="device-button volume-up"></div>
+              <div class="device-button volume-down"></div>
+              <div class="device-screen">
+                <img
+                  src="./home.jpg" 
+                  alt="Home Screen" 
+                  class="screenshot light-mode-img"
+                  data-dark-src="./profile.jpg"
+                />
+                <div class="description">
+                  <h3>Collection Display</h3>
+                  <p>Manage your personal settings and preferences</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Device 5 -->
+            <div class="device-wrapper">
+              <div class="device-notch"></div>
+              <div class="device-button power"></div>
+              <div class="device-button volume-up"></div>
+              <div class="device-button volume-down"></div>
+              <div class="device-screen">
+                <img
+                  src="./home.jpg" 
+                  alt="Home Screen" 
+                  class="screenshot light-mode-img"
+                  data-dark-src="./profile.jpg"
+                />
+                <div class="description">
+                  <h3>User Profile</h3>
+                  <p>Manage your personal settings and preferences</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-nav">
+            <button class="carousel-dot active"></button>
+            <button class="carousel-dot"></button>
+            <button class="carousel-dot"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fas fa-cloud-sun feature-icon"></i>
+            <h3>Weather-Smart Planning</h3>
+            <p>
+              Plan your outfits with real-time weather insights to ensure you're
+              always dressed appropriately.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-search feature-icon"></i>
+            <h3>Intelligent Search</h3>
+            <p>
+              Quickly find your saved outfits by name or date, making it easy to
+              manage and retrieve your wardrobe favorites.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-stream feature-icon"></i>
+            <h3>Clean, Focused Design</h3>
+            <p>
+              Enjoy a minimalist and distraction-free interface that helps you
+              focus solely on managing your wardrobe.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-tshirt feature-icon"></i>
+            <h3>Digital Cataloging</h3>
+            <p>
+              Easily photograph and categorize your entire wardrobe into four
+              essential categories.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-heart feature-icon"></i>
+            <h3>Outfit Creator</h3>
+            <p>
+              Create and save your favorite outfit combinations with our
+              intelligent builder.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-cog feature-icon"></i>
+            <h3>Customizable Experience</h3>
+            <p>
+              Make the app truly yours with customizable dashboard icons and
+              themes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How-it-works Section -->
+    <section class="features" id="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="features-grid">
+          <div class="how-it-works-card">
+            <i class="fas fa-camera feature-icon"></i>
+            <h3>Photo Integration</h3>
+            <p>
+              Add your clothes to your collection directly from your photo
+              gallery or take new photos using your camera.
+            </p>
+          </div>
+          <div class="how-it-works-card">
+            <i class="fas fa-magic feature-icon"></i>
+            <h3>Background Removal</h3>
+            <p>
+              Our API removes unnecessary background distractions, giving you a
+              clear, realistic model of your clothing.
+            </p>
+          </div>
+          <div class="how-it-works-card">
+            <i class="fas fa-tags feature-icon"></i>
+            <h3>Categorization</h3>
+            <p>
+              Categorize each item as a shirt, jeans, shoes, or accessory and
+              manage them with ease.
+            </p>
+          </div>
+          <div class="how-it-works-card">
+            <i class="fas fa-database feature-icon"></i>
+            <h3>Secure Storage</h3>
+            <p>
+              All items are securely saved in our database, allowing you to view
+              or delete them anytime.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Section -->
+    <section class="features" id="privacy">
+      <div class="container">
+        <h2 class="section-title">Privacy</h2>
+        <div class="features-grid">
+          <div class="privacy-card">
+            <i class="fas fa-shield-alt feature-icon"></i>
+            <h3>No Data Collection</h3>
+            <p>
+              WARdrobe. never collects data for advertising purposes. Your
+              personal style choices remain private.
+            </p>
+          </div>
+          <div class="privacy-card">
+            <i class="fas fa-ban feature-icon"></i>
+            <h3>No Ads or Recommendations</h3>
+            <p>
+              We don't push shopping recommendations or product advertisements,
+              ensuring a distraction-free experience.
+            </p>
+          </div>
+          <div class="privacy-card">
+            <i class="fas fa-lock feature-icon"></i>
+            <h3>Data Security</h3>
+            <p>
+              Your personal style choices and outfit combinations are securely
+              stored and not shared with third parties.
+            </p>
+          </div>
+          <div class="privacy-card">
+            <i class="fas fa-user-secret feature-icon"></i>
+            <h3>Complete Privacy</h3>
+            <p>
+              Focus solely on organizing and managing your existing wardrobe
+              without compromising your privacy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <a href="mailto:info@wardrobeapp.com" class="contact-link">
+              <i class="fas fa-envelope contact-icon"></i>
+              <h3>Email Us</h3>
+              <p>info@wardrobeapp.com</p>
+            </a>
+          </div>
+          <div class="contact-card">
+            <a
+              href="https://instagram.com/wardrop_app"
+              target="_blank"
+              class="contact-link"
+            >
+              <i class="fab fa-instagram contact-icon"></i>
+              <h3>Follow on Instagram</h3>
+              <p>@wardrop_app</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta" id="download">
+      <div class="container">
+        <h2 class="section-title">Download WARdrobe App</h2>
+        <p>
+          Scan the QR code or click the button below to download our app from
+          the App Store.
+        </p>
+        <div class="cta-content">
+          <img src="./qr-code.png" alt="QR Code" class="qr-code" />
+          <a href="#" class="cta-button">Download on the App Store</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

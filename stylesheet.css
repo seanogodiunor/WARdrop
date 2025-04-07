@@ -1,0 +1,572 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  /* Light Mode Colors */
+  --primary: #ececec; /* Dark green */
+  --gold: #ffd700; /* Bright gold */
+  --green: #ececec; /* Dark green for consistency */
+  --cta: #ffd700; /* Gold for CTA */
+  --primary-dark: #083615; /* Darker green for hover */
+  --text-dark: #1a1a1a; /* Near black for text */
+  --text-light: #000000; /* White text */
+  --bg-light: #ffffff; /* White background */
+
+  /* Dark Mode Colors */
+  --primary-dark-mode: #1e1e1e; /* Keep the brand green */
+  --green-dark-mode: #1e1e1e; /* Slightly lighter green */
+  --gold-dark-mode: #ffd700; /* Keep gold bright for contrast */
+  --cta-dark-mode: #ffd700; /* Gold for dark mode CTA */
+  --text-dark-mode: #ffffff; /* White text for dark mode */
+  --text-light-mode: #e0e0e0; /* Light gray text */
+  --bg-dark: #000000; /* Dark background */
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--green) 100%);
+  padding: 20px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.cta-button {
+  background-color: var(--gold);
+  color: var(--green);
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: var(--primary-dark);
+  color: var(--gold);
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--bg-light);
+  width: 250px;
+  height: 100vh;
+  padding: 60px 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.mobile-nav .cta-button {
+  width: 100%;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .mobile-nav.active {
+    display: block;
+  }
+}
+
+/* Hero Section */
+.hero {
+  padding: 160px 0 80px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: var(--text-dark);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+/* Features Section */
+.features {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  padding: 0 15px;
+}
+
+.feature-card,
+.how-it-works-card,
+.privacy-card {
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover,
+.how-it-works-card:hover,
+.privacy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  color: var(--gold);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  padding: 0 15px;
+}
+
+.contact-card {
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.contact-card:hover .contact-link {
+  color: var(--gold);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  color: var(--gold);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Call to action Section */
+.cta {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta .section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.qr-code {
+  width: 150px;
+  height: 150px;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark-mode);
+}
+
+body.dark-mode header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark-mode) 0%,
+    var(--green-dark-mode) 100%
+  );
+}
+
+body.dark-mode section {
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark-mode) 0%,
+    var(--green-dark-mode) 100%
+  );
+}
+
+body.dark-mode button {
+  background-color: var(--gold-dark-mode);
+  color: var(--primary-dark-mode);
+}
+
+body.dark-mode .cta-button {
+  background-color: var(--gold-dark-mode);
+  color: var(--primary-dark-mode);
+}
+
+body.dark-mode .cta-button:hover {
+  background-color: var(--green-dark-mode);
+  color: var(--gold-dark-mode);
+}
+
+body.dark-mode .feature-card,
+body.dark-mode .how-it-works-card,
+body.dark-mode .privacy-card,
+body.dark-mode .contact-card {
+  background-color: var(--primary-dark-mode);
+  color: var(--text-dark-mode);
+}
+
+body.dark-mode .feature-icon,
+body.dark-mode .contact-icon {
+  color: var(--gold-dark-mode);
+}
+
+body.dark-mode .nav-links a {
+  color: var(--text-dark-mode);
+}
+
+body.dark-mode .nav-links a:hover {
+  color: var(--gold-dark-mode);
+}
+
+.dark-mode-toggle input {
+  display: none;
+}
+
+.dark-mode-toggle label {
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--text-dark);
+}
+
+body.dark-mode .dark-mode-toggle label {
+  color: var(--text-dark-mode);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Carousel Styles */
+.carousel-container {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 2rem;
+  padding: 0 20px;
+}
+
+.device-wrapper {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 600px;
+  background: #1a1a1a;
+  border-radius: 40px;
+  padding: 10px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+  position: relative; /* Added this */
+}
+
+.device-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.device-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 25px;
+  background: #1a1a1a;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 3; /* Increased z-index */
+}
+
+.device-screen {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.device-wrapper .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  z-index: 2;
+}
+
+.device-wrapper:hover .description {
+  opacity: 1;
+}
+
+.device-button {
+  position: absolute;
+  right: -3px;
+  width: 3px;
+  height: 40px;
+  background: #2a2a2a;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  z-index: 3; /* Added z-index */
+}
+
+.device-button.power {
+  top: 100px;
+}
+
+.device-button.volume-up {
+  top: 150px;
+}
+
+.device-button.volume-down {
+  top: 200px;
+}
+
+/* Navigation Dots */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 4; /* Increased z-index */
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: #333;
+}
+
+/* Navigation Buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4; /* Increased z-index */
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-button.prev {
+  left: 20px;
+}
+
+.carousel-button.next {
+  right: 20px;
+}
+
+/* Dark Mode Support */
+body.dark-mode .device-wrapper {
+  background: #000000;
+}
+
+body.dark-mode .device-notch {
+  background: #000000;
+}
+
+body.dark-mode .device-button {
+  background: #1a1a1a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .device-wrapper {
+    width: 280px;
+    height: 560px;
+  }
+
+  .carousel-button {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Light Mode Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 40px; /* Adjust this value based on your logo size */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Dark Mode logo */
+@media (max-width: 768px) {
+  .logo-image {
+    height: 32px; /* Slightly smaller on mobile */
+  }
+}
